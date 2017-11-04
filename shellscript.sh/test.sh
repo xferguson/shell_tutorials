@@ -12,4 +12,20 @@ fi
       echo "X is more than or equal to zero"
 [ "$X" = "0" ] && \
       echo "X is the string of number \"0\""
-
+[ "$X" = "hello" ] && \
+      echo "X matches the string \"hello\""
+[ "$X" != "hello" ] && \
+      echo "X is not the string \"hello\""
+[ -n "$X" ] && \
+      echo "X is of nonzero length"
+[ -f "$X" ] && \
+      echo "X is the path of a real file" || \
+      echo "No such file: $X"
+[ -x "$X" ] && \
+      echo "X is the path of an executable file"
+[ "$X" -nt "/etc/passwd" ] && \
+      echo "X is a file which is newer than /etc/passwd"
+[ $X -ne 0 ] && echo "X isn't zero" || echo "X is zero"
+[ -f $X ] && echo "X is a file" || echo "X is not a file"
+[ -n $X ] && echo "x is of a non-zero length" || \
+      echo "X is of zero length"
